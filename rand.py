@@ -50,10 +50,6 @@ def togglecol():
     update_children(root)
     root.after(200,togglecol)
 
-def alarm():
-    mixer.music.load("alarm.mp3")
-    mixer.music.play(loops=-1)
-    mixer.music.set_volume(1.0)
 
 def on_closing():
     keyboard.unblock_key('tab')
@@ -141,7 +137,6 @@ def countdown(time_left, label):
 root.protocol("WM_DELETE_WINDOW", on_closing)
 root.config(bg= "red",cursor="none")
 togglecol()
-alarm()
 enforce_unmute()
 warningui()
 root.bind("<F1>", lambda e: "break")
